@@ -32,15 +32,14 @@ public class OdinLib extends JavaPlugin {
 
     private static OdinLib instance;
 
+    public static Plugin getInstance() {
+        return instance != null ? instance : JavaPlugin.getProvidingPlugin(OdinLib.class);
+    }
     @Override
     public void onEnable() {
         getLogger().info("Loading Odin Lib v" + getDescription().getVersion() + "!");
-        instance = this;
     }
 
-    public static OdinLib getInstance() {
-        return instance;
-    }
 
     /**
      * Gets the plugin that called the calling method of this method
