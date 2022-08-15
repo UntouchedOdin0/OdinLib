@@ -30,7 +30,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public class OdinLib extends JavaPlugin {
 
-    public static OdinLib instance;
+    private static OdinLib instance;
 
     @Override
     public void onEnable() {
